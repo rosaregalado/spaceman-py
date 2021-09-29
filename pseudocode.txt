@@ -1,0 +1,79 @@
+Import the "random" module
+
+Create a function to randomly selects and loads the secret word from a list
+  open words text file  
+  create a variable to store all lines in the file as list objects
+  close the open file
+
+  split the list of objects using an empty space
+  create a variable and use the random module to choose the "secret word"
+  return the secret word
+
+
+Create a function to check if all the letters of the secret word have been guessed
+  create an variable and set to true
+  create a "for in" loop to check for letters in secret word(string)
+    write an "if not in" statement to check if the letter is not in the guessed letters(list of strings)
+    if the statement is true, set the variable to false
+    break loop
+  return variable
+
+
+Create a function to get a string displaying the letters guessed(input) so far   
+  create a local variable and store an empty string
+  create a "for in" loop to check for letters(chars) in secret word
+    write an "if in" statement to check if the letter is in the guessed letters(list of strings)
+      if the statement is true, add the letter to the empty string variable
+    else,
+      if the statement is not true, add an underscore to the empty string variable
+  return the empty string variable
+
+
+Create a function to check if the letter guessed(input) is in the secret word(string)
+  write an "if in" statement to check if the letter guessed(input) is in the secret word(string)
+    if the statement is true, return true
+  else,
+    the statement is false, return false
+
+
+Create a function that controls the spaceman game, which uses a secret word(string) as argument
+  create a local variable with an empty array, will be used for storing letter strings
+  create a variable to count the amount of guesses left, set to zero
+  create a variable to keep the program running, set to true
+
+  display a welcome statement for the user
+  display a statement with the length of the secret word(string)
+  display a statement instructing the user with the amount of incorrect guesses they get 
+
+  create a "while" loop that keeps the program running 
+    prompt the user to "input" a letter to guess the secret word
+    create a "while" loop to check that the user only inputs one letter
+      display a message saying "only one letter"
+      prompt the user to input the letter again
+
+    write an "if" statement calling the helper function that checks if the input letter is in the secret word
+      display a message saying "your guess appears in the word"
+      append the input letter to the local variable array
+    else,
+      display a message saying "guess again"
+      increment "guesses" by one
+
+    display the guessed word so far by calling the helper function "get guessed word"
+
+    write an "if" statement calling the function "is word guessed" to check for win or lose
+      display a message saying the user wins
+      set running variable to false to end loop(game ends)
+    else,
+      write an "if" statement to check if user has reached 7 incorrect guesses
+        display a message saying the user loses
+        display the secret word for the user
+        set the running variable to false to end loop(game ends)
+
+
+
+
+
+
+
+
+

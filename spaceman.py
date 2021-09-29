@@ -55,7 +55,6 @@ def get_guessed_word(secret_word, letters_guessed):
     display_word = ""
 
     for char in secret_word:
-      #check if char is a letter from alpahabet
       if char in letters_guessed:
         display_word += char
       else:
@@ -82,10 +81,6 @@ def is_guess_in_word(guess, secret_word):
       return True
     else:
       return False  
-
-  
-
-      
 
 
 def spaceman(secret_word):
@@ -125,17 +120,15 @@ def spaceman(secret_word):
 
       #TODO: check if the game has been won or lost
       if is_word_guessed(secret_word, letters_guessed):
-        running = False
         #user wins
+        print(f"You win! The secret word is {secret_word}.")
+        running = False
       else:
         #user loses  
         if guesses == 7:
           print("You failed to guess the word.")
           print(f"The secret word is {secret_word}.")
           running = False
-      
-
-
    
       
       
