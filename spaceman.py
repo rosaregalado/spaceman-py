@@ -92,12 +92,12 @@ def spaceman(secret_word):
 
     '''
     letters_guessed = []
-    guesses = 0
+    guesses = 7
     running = True
     
 
     print("Welcome to spaceman!")
-    print(f"The secret word contains: {len(secret_word)} letters")
+    print(f"The secret word contains: {len(secret_word)} letters.")
 
     print("You get 7 incorrect guesses, please enter one letter per round")
     
@@ -113,7 +113,8 @@ def spaceman(secret_word):
         letters_guessed.append(input_letter)
       else:
         print("Guess again")
-        guesses += 1  
+        guesses -= 1  
+        print(f"You have {guesses} guesses remaining.")
 
       #TODO: show the guessed word so far
       print(f"Guessed word so far: {get_guessed_word(secret_word, letters_guessed)}")
@@ -125,7 +126,7 @@ def spaceman(secret_word):
         running = False
       else:
         #user loses  
-        if guesses == 7:
+        if guesses == 0:
           print("You failed to guess the word.")
           print(f"The secret word is {secret_word}.")
           running = False

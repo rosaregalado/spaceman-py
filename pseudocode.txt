@@ -38,7 +38,7 @@ Create a function to check if the letter guessed(input) is in the secret word(st
 
 Create a function that controls the spaceman game, which uses a secret word(string) as argument
   create a local variable with an empty array, will be used for storing letter strings
-  create a variable to count the amount of guesses left, set to zero
+  create a variable to count the amount of guesses left, set equal to 7
   create a variable to keep the program running, set to true
 
   display a welcome statement for the user
@@ -56,7 +56,8 @@ Create a function that controls the spaceman game, which uses a secret word(stri
       append the input letter to the local variable array
     else,
       display a message saying "guess again"
-      increment "guesses" by one
+      decrement "guesses" by one
+      display a message stating number of guesses remaining
 
     display the guessed word so far by calling the helper function "get guessed word"
 
@@ -64,7 +65,7 @@ Create a function that controls the spaceman game, which uses a secret word(stri
       display a message saying the user wins
       set running variable to false to end loop(game ends)
     else,
-      write an "if" statement to check if user has reached 7 incorrect guesses
+      write an "if" statement to check if user has reached 0 remaining guesses
         display a message saying the user loses
         display the secret word for the user
         set the running variable to false to end loop(game ends)
